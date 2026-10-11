@@ -225,3 +225,25 @@ footer .row { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .teaser img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 80% 30%; border-radius: 5px; }
 .teaser p { margin: 0 0 18px; font-size: clamp(18px, 1.9vw, 23px); color: var(--ink-soft); font-weight: 300; max-width: 60ch; }
 .links a[aria-current] { text-decoration: underline; text-underline-offset: 5px; }
+
+.group { margin: 56px 0 20px; font-family: var(--display); font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; }
+#works .label + .group { margin-top: 0; }
+.single figcaption, .tall figcaption { margin-top: 8px; font-family: var(--display); font-size: 12px; letter-spacing: .06em; color: var(--ink-faint); }
+.single.tall img { aspect-ratio: 2 / 3; max-height: 760px; }
+.pair.sq img { aspect-ratio: 1 / 1; }
+.pair.tall img { aspect-ratio: 3 / 4; }
+.stills.covers img { aspect-ratio: auto; height: 100%; max-height: 320px; object-fit: contain; background: transparent; }
+.stills.covers { align-items: end; }
+.proj .editions { margin-top: 20px; }
+.cv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; }
+@media (max-width: 800px) { .cv { grid-template-columns: 1fr; } }
+.cv h4 { margin: 0 0 10px; font-size: 18px; }
+.cv ul { margin: 0; padding: 0; list-style: none; font-size: 16px; color: var(--ink-soft); }
+.cv li { padding-block: 5px; border-bottom: 1px solid var(--line); }
+.cv li b { font-family: var(--display); font-weight: 500; color: var(--ink-mute); font-variant-numeric: tabular-nums; margin-right: 8px; }
+
+.studio-grid { margin: 16px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.studio-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.studio-grid img.wide { grid-column: 1 / -1; aspect-ratio: 1400 / 317; }
+.studio-grid figcaption { grid-column: 1 / -1; font-family: var(--display); font-size: 12px; letter-spacing: .06em; color: var(--ink-faint); }
+@media (max-width: 560px) { .studio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
