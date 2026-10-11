@@ -247,3 +247,17 @@ footer .row { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .studio-grid img.wide { grid-column: 1 / -1; aspect-ratio: 1400 / 317; }
 .studio-grid figcaption { grid-column: 1 / -1; font-family: var(--display); font-size: 12px; letter-spacing: .06em; color: var(--ink-faint); }
 @media (max-width: 560px) { .studio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.stills.posters img { aspect-ratio: 5 / 7; object-fit: cover; background: #fff; }
+.stills.covers.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.energy { margin: 12px 0 0; }
+.energy .stills img { aspect-ratio: 600 / 380; object-fit: cover; background: #222; }
+.energy figcaption { margin-top: 8px; font-family: var(--display); font-size: 12px; letter-spacing: .06em; color: var(--ink-faint); }
+
+.card .thumb b.fallback { display: none; }
+.card .thumb.noimg b.fallback { display: block; }
+
+.gallery { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.gallery img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; background: var(--panel); }
+@media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
