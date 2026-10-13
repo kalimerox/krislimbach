@@ -42,7 +42,7 @@ document.querySelectorAll('.vid').forEach(function (v) {
 /* Bandcamp players */
 var players = document.getElementById('players');
 if (players) RELEASES.forEach(function (r) {
-  var src = 'https://bandcamp.com/EmbeddedPlayer/album=' + r[1] + '/size=large/bgcol=1c1917/linkcol=f49ac1/tracklist=false/';
+  var src = 'https://bandcamp.com/EmbeddedPlayer/album=' + r[1] + '/size=large/bgcol=22151b/linkcol=f49ac1/tracklist=false/';
   players.appendChild(el('iframe', { src: src, title: r[0], loading: 'lazy', seamless: '' }));
 });
 
@@ -54,7 +54,20 @@ var discoAll = false;
 function renderDisco() {
   disco.innerHTML = '';
   (discoAll ? DISCO : DISCO.slice(0, 8)).forEach(function (d) {
-    var t = d[2] ? el('a', { href: d[2], target: '_blank', rel: 'noopener', text: d[0] }) : document.createTextNode(d[0]);
+    var t = !d[2] ? document.createTextNode(d[0]) : /^https?:/.test(d[2]) ? el('a', { href: d[2], target: '_blank', rel: 'noopener', text: d[0] }) : el('a', { href: d[2], text: d[0] });
+    if (d[3]) {
+      /* A series: the row opens to show each part with its cover */
+      var parts = el('ul', { class: 'parts' });
+      d[3].forEach(function (p) {
+        var cover = p[3] ? el('img', { src: p[3], alt: 'Cover of ' + p[0], loading: 'lazy' }) : el('div', { class: 'nocover' });
+        var link = el('a', { href: p[2], target: '_blank', rel: 'noopener' }, [cover, el('b', { text: p[0] })].concat(p[1] ? [el('span', { text: p[1] })] : []));
+        parts.appendChild(el('li', {}, [link]));
+      });
+      var sum = el('summary', {}, [el('b', { text: d[0] }), el('span', { text: d[1] })]);
+      var more = el('a', { class: 'ghost', href: d[2], text: 'about the series' });
+      disco.appendChild(el('li', { class: 'series' }, [el('details', {}, [sum, parts, more])]));
+      return;
+    }
     disco.appendChild(el('li', {}, [el('b', {}, [t]), el('span', { text: d[1] })]));
   });
   discoToggle.textContent = discoAll ? 'show less' : 'all releases (' + DISCO.length + ')';

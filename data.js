@@ -2,7 +2,7 @@
    CONTENT LISTS (edit here)
    EVENTS: [year, date, text]   newest first
    RELEASES: [title, Bandcamp album id, link]
-   DISCO: [title, credits, link (optional)]
+   DISCO: [title, credits, link (optional), parts (optional): [[title, credits, link, cover image]]]
    ============================================================ */
 var EVENTS = [
   ['2026','25 Nov','Performance for film and tapes at Music for Cinemas, Filmrauschpalast Moabit, Berlin', 'upcoming'],
@@ -55,6 +55,7 @@ var EVENTS = [
   ['2021','Apr/May','window interface #11, micro residency at Liebig12: Pilzschaltkreise (fungus circuits)'],
   ['2021','26/28 Feb','T.A.T.V. #2, Temporary Autonomous Television, three day streaming experiment at Ausland, funded by Initiative Neue Musik Berlin'],
   ['2021','20 Jan','Duo with Rinus van Alebeek at Experimentik'],
+  ['2020','14 Oct','Audiosfera. Experimentación sonora 1980-2020, exhibition curated by Francisco López, Museo Reina Sofía, Madrid (until 15 Feb 2021)'],
   ['2020','14 Aug','Performance with Lisa Müller-Trede & Michael Ferreira at Downtown Variety, La MaMa'],
   ['2020','7 Aug','Talk “Teorema para la construcción de paisajes”, Museo de Arte de Zapopan, Guadalajara (online)'],
   ['2020','22/24 Jul','T.A.T.V. 1, first edition, streamed from Ausland'],
@@ -158,14 +159,32 @@ var RELEASES = [
 ];
 
 var DISCO = [
-  ['The Last Minute Of', 'annual self-published minute of sound, every New Year’s Eve since 2012', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2022'],
+  ['The Last Minute Of', 'annual series · one minute of sound distilled from the past year, self-published every New Year’s Eve since 2012', 'the-last-minute-of.html', [
+    ['2025', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2025', 'img/lmo-2025.jpg'],
+    ['2024', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2024', 'img/lmo-2024.jpg'],
+    ['2023', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2023', 'img/lmo-2023.jpg'],
+    ['2022', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2022', 'img/lmo-2022.jpg'],
+    ['2021', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2021', 'img/lmo-2021.jpg'],
+    ['2020', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2020', 'img/lmo-2020.jpg'],
+    ['2019', '', 'https://krislimbach.bandcamp.com/track/last-minute-of-2019', 'img/lmo-2019.jpg'],
+    ['2018', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2018', 'img/lmo-2018.jpg'],
+    ['2017', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2017', 'img/lmo-2017.jpg'],
+    ['2015', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2015', 'img/lmo-2015.jpg'],
+    ['2013', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2013', 'img/lmo-2013.jpg'],
+    ['2012', '', 'https://krislimbach.bandcamp.com/track/the-last-minute-of-2012', 'img/lmo-2012.jpg']
+  ]],
+  ['begin _if_ ()', 'ongoing series since 2005 · four releases', 'begin-if.html', [
+    ['begin _if_ (4)', 'Contour Editions · 2022', 'https://contoureditions.com/releases/ce.onl_0040/ce.onl_0040.html', 'img/begin-if-4.jpg'],
+    ['begin _if_ (3)', 'cassette · Agxivatein · 2014', 'https://krislimbach.bandcamp.com/album/begin-if-3', 'img/begin-if-3-front.jpg'],
+    ['begin _if_ (2)', 'modisti netlabel / framework radio · 2010', 'https://krislimbach.bandcamp.com/album/begin-if-2', 'img/begin-if-2.jpg'],
+    ['begin _if_ (1)', 'Contour Editions · 2009', 'http://www.contoureditions.com/releases/ce.onl_0002/ce.onl_0002.html', 'img/begin-if-1.jpg']
+  ]],
   ['Full Album', 'solo album, developed at EMS Stockholm · dents de scie · digital, 17 tracks · 2024', 'https://dents-de-scie.bandcamp.com/album/full-album'],
-  ['begin _if_ (4)', 'Contour Editions · ce.onl_0040 · 2022', 'https://contoureditions.com/releases/ce.onl_0040/ce.onl_0040.html'],
   ['A Computerized Star', 'on point cloud noise II · Silent Records · 2022', 'https://silentrecords.bandcamp.com/album/point-cloud-noise-ii'],
-  ['Audiosfera. Experimentación sonora 1980-2020', 'Exhibition, Museo Reina Sofía · curated by Francisco López · 2020', 'https://www.museoreinasofia.es/en/exhibition/audiosphere'],
+  ['Spectral Evidence', 'Rieko Okuda & Kris Limbach · Zeromoon · cassette & digital · 2021', 'https://zeromoon.bandcamp.com/album/spectral-evidence'],
+  ['Audiosfera. Experimentación sonora 1980-2020', 'exhibition and release · Museo Reina Sofía, Madrid · curated by Francisco López · 2020', 'https://www.museoreinasofia.es/en/exhibition/audiosphere'],
   ['A*rray 4, Pt. 1', 'Wendy Eisenberg, Jonathan Zorn, Kris Limbach & Gil Sansón · Andy Graydon · on A*rray, 2020', 'https://andygraydon.bandcamp.com/album/a-rray-4'],
   ['XQX: Next Quasi Complex', 'John Bock & Kris Limbach · vinyl · Verlag der Buchhandlung Walther König · 2020', 'https://krislimbach.bandcamp.com/album/xqx-n-4h'],
-  ['Spectral Evidence', 'Rieko Okuda & Kris Limbach · Zeromoon · cassette & digital · 2021', 'https://zeromoon.bandcamp.com/album/spectral-evidence'],
   ['Caspar Dead Pain', 'Guido Henneböhl, Hopek Quirin & Kris Limbach · H.A.K Lofi Records · HAK265 · 2019', 'https://haklofirecord.bandcamp.com/album/hak265-kaspar-dead-pain'],
   ['Hell’s Bells (OST)', 'John Bock & Kris Limbach · Walther König / emitter micro · EM 011/2 · 2018', 'https://emittermicro.com/em-011-2/'],
   ['Dead & Juicy (OST)', 'John Bock & Kris Limbach · Walther König / emitter micro · EM 011/1 · 2018', 'https://emittermicro.com/em-011-1/'],
@@ -176,7 +195,6 @@ var DISCO = [
   ['Live at Plateforme Paris 21.04.2014', 'Anton Mobin, Kris Limbach & Hopek Quirin · amp-recs · amp140 · 2016', 'https://archive.org/details/amp140'],
   ['PARAL-LEL', 'Hopek Quirin & Kris Limbach · Classwar Karaoke · 2015', 'https://classwarkaraoke.bandcamp.com/album/paral-lel-nr1-15'],
   ['21', 'Hopek Quirin (microcassettes, bass) & Kris Limbach (tapes, prepared drums) · live at Taborkirche Berlin, 04.04.2014 · amp-recs · amp137 · 2014', 'https://archive.org/details/amp137'],
-  ['begin _if_ (3)', 'limited cassette · Agxivatein · violin: Angelina Kartsaki · photography & layout: Julien Charlon · review: The Sound Projector', 'http://www.thesoundprojector.com/2015/03/29/do-while/'],
   ['Kein Zurück!', 'Kris Limbach, Miguel A. Garcia & Kerstin Podbiel · VHS multiple + art print, ed. 33 · Staalplaat · 2013', 'http://staalplaat.com/recording/kein-zuruck'],
   ['Hopek Quirin, Anton Mobin & Kris Limbach', 'CD · emitter micro · 2013 · review: Vital Weekly 884', 'https://emittermicro.bandcamp.com/album/hopek-quirin-anton-mobin-kris-limbach'],
   ['9th result of the double-deaf experiment with bubbles', 'Kotomi Nishiwaki, Yuko Matsuyama, Kris Limbach & Hopek Quirin · 9-PARAL-LEL on Classwar Karaoke 0021 Survey', 'http://freemusicarchive.org/music/Classwar_Karaoke/Classwar_Karaoke_-_0021_Survey/'],
@@ -189,9 +207,7 @@ var DISCO = [
   ['Exquisite Corpse Audio Chain Letter 251', 'with Hal McGee, Post-Avantist, Ars Sonor, Roberto Lazzarino, Marax, Thee Uncondemning Monk, Hobo Liked Gnomix, Anton Mobin · 2012', 'http://www.archive.org/download/ecaclv4/ExquisiteCorpseAudioChainLetter251.mp3'],
   ['Exquisite Corpse Audio Chain Letter 355', 'with Hal McGee, Ars Sonor, Don Cook, Ade Bordicott, Karl Hammond, Òscar Hidalgo, Otto von Rhinau, Soma · 2012', 'http://www.archive.org/download/ecaclv5/ExquisiteCorpseAudioChainLetter355.mp3'],
   ['2(3), incomplete triptychs', 'Kris Limbach & Pierce Warnecke · emitter micro 001 · 2011 · review: The Sound Projector', 'https://emittermicro.com/em-001/'],
-  ['begin _if_ (2)', 'Christoph Limbach · modisti netlabel / framework radio · 2010', 'http://www.frameworkradio.net/2011/02/318-2011-02-13/'],
   ['For Egypt', 'Anton Mobin & kx-second lost Puppy Revolte · International Email Audio Art Project Vol. 9 · 2011', 'https://archive.org/details/InternationalEmailAudioArtProjectVolume9'],
   ['Contrasts', 'Anton Mobin & second lost puppy revolte · International Email Audio Art Project Vol. 5 · 2010', 'http://archive.org/details/InternationalEmailAudioArtProjectVolume5'],
-  ['begin _if_ (1)', 'Christoph Limbach · Contour Editions · free download · 2009', 'http://www.contoureditions.com/releases/ce.onl_0002/ce.onl_0002.html'],
   ['A Fragment of a dream reminds me', 'Reward Lost Puppy · self-published, 100 copies · 2006']
 ];
